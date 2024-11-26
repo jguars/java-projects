@@ -1,29 +1,22 @@
 public class Main {
-
-    public static int calculatePunchDamage(int strength) {
-        return strength * 2;
-    }
-
-    public static int calculateSpecialAttackDamage(
-            int strength, String attacktype) {
-        int damage = strength;
-        if (attacktype.equals("Fire Punch")) {
-            damage *= 3;
-        } else if (attacktype.equals("Ice Blast")) {
-            damage *= 2;
-        }
-        return damage;
-    }
-
     public static void main(String[] args) {
-        int villainHealth = 100;
-        int punchStrength = 20;
-        String attackType = "Fire Punch";
+        // Attributes of Hero 1: Legolas
+        Hero arrowMan = new Hero();
+        arrowMan.name = "Legolas";
+        arrowMan.strength = 120;
+        System.out.println("Name of the Hero: " + arrowMan.name);
 
-        int damageByPunch = calculatePunchDamage(punchStrength);
-        int damageBySpecialAttack = calculateSpecialAttackDamage(punchStrength, attackType);
+        int punchDamage = arrowMan.calculatePunchDamage();
+        System.out.print("Ouch, your bow caused "
+                + punchDamage + "% damage.");
 
-        System.out.println("Enemy was hit by the amount of " + damageByPunch);
-        System.out.println("Villain got beaten by " + damageBySpecialAttack + " powerful damage! Whoo!");
+        // Attributes of Hero 1: Aragorn
+        Hero swordMan = new Hero();
+        swordMan.name = "Aragorn";
+        swordMan.strength = 150;
+
+        int specialAttackDamage =
+                swordMan.calculateSpecialAttackDamage("sword");
+        System.out.print("Your sword caused " + specialAttackDamage + "% damage.");
     }
 }
