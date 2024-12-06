@@ -1,7 +1,7 @@
 public class LOTR {
     public static void main(String[] args) {
         // Attributes of Hero 1: Legolas
-        Hero arrowMan = new Hero();
+        LOTRHero arrowMan = new LOTRHero();
         arrowMan.name = "Legolas";
         arrowMan.strength = 120;
         System.out.println("Name of the Hero: " + arrowMan.name);
@@ -11,7 +11,7 @@ public class LOTR {
                 + punchDamage + "% damage.");
 
         // Attributes of Hero 1: Aragorn
-        Hero swordMan = new Hero();
+        LOTRHero swordMan = new LOTRHero();
         swordMan.name = "Aragorn";
         swordMan.strength = 150;
 
