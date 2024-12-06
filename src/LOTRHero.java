@@ -1,4 +1,4 @@
-public class Hero {
+public class LOTRHero {
 
     // properties of a Hero
     String name = "Hero";

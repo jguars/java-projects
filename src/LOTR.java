@@ -1,4 +1,4 @@
-public class Main {
+public class LOTR {
     public static void main(String[] args) {
         // Attributes of Hero 1: Legolas
         Hero arrowMan = new Hero();
@@ -20,3 +20,4 @@ public class Main {
         System.out.print("Your sword caused " + specialAttackDamage + "% damage.");
     }
 }
+
