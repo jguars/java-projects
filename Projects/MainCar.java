@@ -59,7 +59,7 @@ class Car extends Vehicle{
     }
 }
 
-public class Main {
+public class MainCar {
     public static void main(String[] args) {
 
         // Create a Car object using the parameterized constructor

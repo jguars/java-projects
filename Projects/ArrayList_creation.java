@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class Main {
+public class ArrayList_creation {
     static class Book {
         String title;
         String author;
