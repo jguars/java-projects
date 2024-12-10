@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 public class Main {
 	public static void main(String[] args) {
 		var currentThread = Thread.currentThread();
@@ -9,6 +11,34 @@ public class Main {
 		currentThread.setName("MainGuy");
 		currentThread.setPriority(Thread.MAX_PRIORITY);
 		printThreadState(currentThread);
+
+		CustomThread customThread = new CustomThread();
+		customThread.start();
+
+		Runnable runnableTask = () -> {
+
+			for (int i = 1; i <= 8; i++) {
+				System.out.print(" 2 ");
+				try {
+                    TimeUnit.MILLISECONDS.sleep(250);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+			}
+		};
+
+		Thread myThread = new Thread(runnableTask);
+		myThread.start();
+
+		for (int i = 1; i <= 3; i++) {
+			System.out.print(" 0 ");
+			try {
+				TimeUnit.SECONDS.sleep(1);
+			}catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 
 	public static void printThreadState(Thread thread) {
